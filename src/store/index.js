@@ -1,5 +1,8 @@
 import { createStore } from 'vuex';
 
+import Home from './module/home';
+import getters from './getters';
+
 export default createStore({
   state: {
     demo: '测试数据',
@@ -15,5 +18,7 @@ export default createStore({
     },
   },
   modules: {
+    Home,
   },
+  getters,
 });

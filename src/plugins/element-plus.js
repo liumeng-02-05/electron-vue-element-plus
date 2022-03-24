@@ -1,6 +1,12 @@
-import { ElButton, ElInput } from 'element-plus';
+import {
+  ElButton, ElInput, ElTabs, ElTabPane, ElTooltip, ElIcon, ElMenu, ElMenuItem, ElSubMenu,
+  ElBreadcrumb, ElBreadcrumbItem, ElTable, ElTableColumn,
+} from 'element-plus';
 
-const ElementUIs = [ElButton, ElInput];
+const ElementUIs = [
+  ElButton, ElInput, ElTabs, ElTabPane, ElTooltip, ElIcon, ElMenu, ElMenuItem, ElSubMenu,
+  ElBreadcrumb, ElBreadcrumbItem, ElTable, ElTableColumn,
+];
 export default {
   install(Vue) {
     ElementUIs.forEach((ElementPlusUi) => {

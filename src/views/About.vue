@@ -2,6 +2,7 @@
   <div>
     <button @click="handleChange">vuex 使用测试</button>
     <button @click="henleMessage">点击通知</button>
+    <router-view name="transmission"/>
   </div>
 </template>
 
@@ -17,8 +18,8 @@ const { remote } = window.require('electron');
 const { app, BrowserWindow, Notification } = remote;
 const store = useStore();
 const demo = fs.readFileSync('/Users/liumeng/Desktop/tx-classroom-resource/开课吧/electron/vue3_electron/package.json', 'utf8');
-console.log('fs 使用测试', demo);
 const handleChange = () => {
+  console.info('fs 使用测试', demo);
   store.dispatch('setDemo', '修改后的值');
   console.log(store.state.demo, '获取vuex的值');
   console.log(os.type(), '返回操作系统名');
